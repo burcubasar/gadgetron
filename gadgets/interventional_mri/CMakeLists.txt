@@ -6,8 +6,8 @@ endif ()
 
 add_library(gadgetron_interventional_mri SHARED 
     gadgetron_interventional_mri_export.h 
-    DeviceChannelSplitterGadget.h
-    DeviceChannelSplitterGadget.cpp
+    FrameAccumulatorGadget.h
+    FrameAccumulatorGadget.cpp
 )
 
 set_target_properties(gadgetron_interventional_mri PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})                                                                                                                                                                                                      
@@ -21,10 +21,11 @@ target_link_libraries(gadgetron_interventional_mri
 
 install(FILES
     gadgetron_interventional_mri_export.h
-    DeviceChannelSplitterGadget.h
+    FrameAccumulatorGadget.h
     DESTINATION ${GADGETRON_INSTALL_INCLUDE_PATH} COMPONENT main)
 
-install(FILES grappa_device.xml grappa_device_cpu.xml DESTINATION ${GADGETRON_INSTALL_CONFIG_PATH} COMPONENT main)
+ install(FILES default_bb.xml DESTINATION ${GADGETRON_INSTALL_CONFIG_PATH}
+    COMPONENT main)
 
 install(TARGETS gadgetron_interventional_mri
 	LIBRARY DESTINATION lib
