@@ -40,33 +40,31 @@ namespace Gadgetron{
 	
         buf_.push_back(im);
         header_.push_back(h);
-
+	
 	// need 10 frames for SVD
-	 if(buf_.size() == 10)
+	 if(buf_.size() <2 )
 	 {
 	  GDEBUG("10 frames\n"); 
-	 
-	  /*
-          // pop the top one
-	  buf_.pop_back(buf_.begin());
-            */
-	  } 
-
+	  
+         // pop the top one
+	  //	 buf_.erase(buf_.begin()); 
+	 } 
+	
 
      } 
 
      
-      // send out result
-       if (this->next()->putq(m1) < 0) {
+     // send out result
+     if (this->next()->putq(m1) < 0) {
                                  		GDEBUG("Failed to pass on data to next Gadget\n");
                                  		return GADGET_FAIL;
                                  	}
-        m1->release();
-       return GADGET_OK;
+      m1->release();
+      return GADGET_OK;
 	
-    }
+ }
 
-   GADGET_FACTORY_DECLARE(FrameAccumulatorGadget)
+ GADGET_FACTORY_DECLARE(FrameAccumulatorGadget)
    
 }
 
