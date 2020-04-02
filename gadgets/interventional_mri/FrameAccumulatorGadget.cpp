@@ -42,7 +42,7 @@ namespace Gadgetron{
         header_.push_back(h);
 	
 	// need 10 frames for SVD
-	 if(buf_.size() <2 )
+	 if(buf_.size() == 10 )
 	 {
 	  GDEBUG("10 frames\n"); 
 	  
