@@ -1,24 +1,21 @@
-#ifndef FRAMEACCUMULATORGADGET_H
-#define FRAMEACCUMULATORGADGET_H
+#ifndef FRAMEACCUMULATORGADGET_H_
+#define FRAMEACCUMULATORGADGET_H_
 
 #include "Gadget.h"
-#include "GadgetMRIHeaders.h"
 #include "hoNDArray.h"
-//#include "gadgetron_mricore_export.h"
+
 #include "gadgetron_interventional_mri_export.h"
 
 #include <ismrmrd/ismrmrd.h>
-#include <complex>
-#include <vector>
-#include <boost/shared_ptr.hpp>
-#include <boost/shared_array.hpp>
+
+
 
 namespace Gadgetron{
 
   // template <typename T> class EXPORTGADGETSMRICORE FrameAccumulatorGadget:
-    class EXPORTGADGETSINTERVENTIONAL_MRI FrameAccumulatorGadget:
-    public Gadget2<ISMRMRD::ImageHeader,hoNDArray< float > >
-    {
+    class EXPORTGADGETSINTERVENTIONAL_MRI FrameAccumulatorGadget :
+       public Gadget2<ISMRMRD::ImageHeader, hoNDArray<float>>
+       {
        public:
         GADGET_DECLARE(FrameAccumulatorGadget);
 
