@@ -11,7 +11,7 @@ namespace {
     using namespace Gadgetron;
     using namespace Gadgetron::Core;
 }
-
+/*
 namespace {
 
     hoNDArray<float> combine_images(const std::deque<Image<float>>& image_buffer){
@@ -31,7 +31,7 @@ namespace {
 
     }    
 }
-
+*/
 namespace Gadgetron::Core {
 
     FrameAccumulatorGadget::FrameAccumulatorGadget(
