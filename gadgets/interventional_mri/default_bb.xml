@@ -86,6 +86,13 @@
 
 	
 	<gadget>
+	        <name>BufferSVD</name>
+	        <dll>gadgetron_interventional_mri</dll>
+	        <classname>BufferSVDGadget</classname>
+	</gadget>
+
+	
+	<gadget>
 		<name>ImageFinish</name>
 		<dll>gadgetron_mricore</dll>
 		<classname>ImageFinishGadget</classname>

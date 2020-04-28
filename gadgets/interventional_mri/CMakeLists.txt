@@ -8,6 +8,8 @@ add_library(gadgetron_interventional_mri SHARED
     gadgetron_interventional_mri_export.h 
     FrameAccumulatorGadget.h
     FrameAccumulatorGadget.cpp
+    BufferSVDGadget.cpp
+    BufferSVDGadget.h
 )
 
 set_target_properties(gadgetron_interventional_mri PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})                                                                                                                                                                                                      
@@ -22,6 +24,7 @@ target_link_libraries(gadgetron_interventional_mri
 install(FILES
     gadgetron_interventional_mri_export.h
     FrameAccumulatorGadget.h
+    BufferSVDGadget.h
     DESTINATION ${GADGETRON_INSTALL_INCLUDE_PATH} COMPONENT main)
 
  install(FILES default_bb.xml DESTINATION ${GADGETRON_INSTALL_CONFIG_PATH}
