@@ -64,7 +64,7 @@ namespace Gadgetron::Core {
 	GDEBUG("coll_data get size %d\n", collected_data.get_size(1));
 	*/
 	
-	hoNDArray<float> data(1,numFrames*numElems);
+	hoNDArray<float> data(1,numFrames*numElems); // put images in the buffer into 2D array
 	for (int x=0; x<buffer.size(); x++){
 	 for (int i = 0; i<data_.size(); i++){
 	   auto [header_,data_,meta_] = buffer[x];
